@@ -29,20 +29,33 @@
 		1B80E5502E65B6F10034B133 /* Viaplay-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Viaplay-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1BB3A9AA2E67502100E7147E /* Exceptions for "UITests" folder in "Viaplay-Test" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UITestLaunchArguments.swift,
+			);
+			target = 1B80E5342E65B6EE0034B133 /* Viaplay-Test */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1B80E5372E65B6EE0034B133 /* Viaplay-Test */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Viaplay-Test";
 			sourceTree = "<group>";
 		};
-		1B80E5492E65B6F10034B133 /* Viaplay-TestTests */ = {
+		1B80E5492E65B6F10034B133 /* Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Viaplay-TestTests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		1B80E5532E65B6F10034B133 /* Viaplay-TestUITests */ = {
+		1B80E5532E65B6F10034B133 /* UITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Viaplay-TestUITests";
+			exceptions = (
+				1BB3A9AA2E67502100E7147E /* Exceptions for "UITests" folder in "Viaplay-Test" target */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				1B80E5372E65B6EE0034B133 /* Viaplay-Test */,
-				1B80E5492E65B6F10034B133 /* Viaplay-TestTests */,
-				1B80E5532E65B6F10034B133 /* Viaplay-TestUITests */,
+				1B80E5492E65B6F10034B133 /* Tests */,
+				1B80E5532E65B6F10034B133 /* UITests */,
 				1B80E5362E65B6EE0034B133 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,7 +144,7 @@
 				1B80E5482E65B6F10034B133 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1B80E5492E65B6F10034B133 /* Viaplay-TestTests */,
+				1B80E5492E65B6F10034B133 /* Tests */,
 			);
 			name = "Viaplay-TestTests";
 			packageProductDependencies = (
@@ -154,7 +167,7 @@
 				1B80E5522E65B6F10034B133 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1B80E5532E65B6F10034B133 /* Viaplay-TestUITests */,
+				1B80E5532E65B6F10034B133 /* UITests */,
 			);
 			name = "Viaplay-TestUITests";
 			packageProductDependencies = (
@@ -406,7 +419,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -445,7 +458,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;

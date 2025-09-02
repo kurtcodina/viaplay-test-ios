@@ -2,7 +2,7 @@
 //  Viaplay_TestApp.swift
 //  Viaplay-Test
 //
-//  Created by codina on 9/1/25.
+//  Created by codina on 9/2/25.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct Viaplay_TestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
