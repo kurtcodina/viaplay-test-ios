@@ -58,15 +58,6 @@
             ReferencedContainer = "container:Viaplay-Test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B80E54F2E65B6F10034B133"
-            BuildableName = "Viaplay-TestUITests.xctest"
-            BlueprintName = "Viaplay-TestUITests"
-            ReferencedContainer = "container:Viaplay-Test.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
             argument = "--uitest_section_loader"

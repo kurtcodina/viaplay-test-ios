@@ -12,9 +12,9 @@ final class FileCache {
     private let directoryURL: URL
 
     init() {
-        let fm = FileManager.default
-        directoryURL = try! fm.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("FileCache", isDirectory: true)
-        try? fm.createDirectory(at: directoryURL,
+        let fileManager = FileManager.default
+        directoryURL = try! fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("FileCache", isDirectory: true)
+        try? fileManager.createDirectory(at: directoryURL,
                                 withIntermediateDirectories: true)
     }
 
@@ -41,10 +41,10 @@ final class FileCache {
     }
     
     func clear() throws {
-        let fm = FileManager.default
-        let contents = try fm.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil, options: [])
+        let fileManager = FileManager.default
+        let contents = try fileManager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil, options: [])
         for file in contents {
-            try fm.removeItem(at: file)
+            try fileManager.removeItem(at: file)
         }
     }
 }
