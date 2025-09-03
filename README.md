@@ -100,8 +100,8 @@ This implementation was a quick test. Next steps to make it production-ready:
 ---
 
 ## Screenshots
-*(Add a screenshot or GIF of the app here — reviewers love visual confirmation)*  
-
+![small1](https://github.com/user-attachments/assets/cdd09218-16c5-41bf-a821-4176229c33aa)
+![small2](https://github.com/user-attachments/assets/531ccc13-2146-4833-a007-0c7bc01f4199)
 ---
 
 ## License
