@@ -13,7 +13,7 @@ final class CacheTests: XCTestCase {
     let url = URL(string: "http://example.com/")!
     let url2 = URL(string: "http://example.net/")!
     
-    func testSaveAndLoadData() throws {
+    func test_cache_saveAndLoad_returnsCorrectData() throws {
         let cache = FileCache()
         let data = "{\"hello\":\"world\"}".data(using: .utf8)!
         try cache.save(data: data, for: url)
@@ -22,21 +22,21 @@ final class CacheTests: XCTestCase {
         XCTAssertEqual(data, loaded)
     }
     
-    func testCacheExists() throws {
+    func test_cache_exists_returnsTrueWhenDataSaved() throws {
         let cache = FileCache()
         let data = "{}".data(using: .utf8)!
         try cache.save(data: data, for: url)
         XCTAssertTrue(cache.exists(for: url))
     }
     
-    func testCacheDoesNotExist() throws {
+    func test_cache_exists_returnsFalseWhenDataNotSaved() throws {
         let cache = FileCache()
         let data = "{}".data(using: .utf8)!
         try cache.save(data: data, for: url)
         XCTAssertFalse(cache.exists(for: url2))
     }
     
-    func testInvalidCacheThrows() {
+    func test_cache_invalidData_throwsError() {
         let cache = FileCache()
         let badData = "%%%".data(using: .utf8)!
         try? cache.save(data: badData, for: url)

@@ -30,32 +30,49 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		1BB3A9AA2E67502100E7147E /* Exceptions for "UITests" folder in "Viaplay-Test" target */ = {
+		1B1AB97B2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-Test" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				UITestLaunchArguments.swift,
+				UITests/RootView_UITests.swift,
+				UITests/SectionView_UITests.swift,
+				UnitTests/CacheTests.swift,
+				UnitTests/ModelsTests.swift,
 			);
 			target = 1B80E5342E65B6EE0034B133 /* Viaplay-Test */;
+		};
+		1B1AB97C2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-TestTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UnitTests/CacheTests.swift,
+				UnitTests/ModelsTests.swift,
+			);
+			target = 1B80E5452E65B6F10034B133 /* Viaplay-TestTests */;
+		};
+		1B1AB97D2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-TestUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UITests/RootView_UITests.swift,
+				UITests/SectionView_UITests.swift,
+				UITests/UITestLaunchArguments.swift,
+			);
+			target = 1B80E54F2E65B6F10034B133 /* Viaplay-TestUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1B80E5372E65B6EE0034B133 /* Viaplay-Test */ = {
+		1B1AB96C2E67B96700F2D716 /* Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Viaplay-Test";
-			sourceTree = "<group>";
-		};
-		1B80E5492E65B6F10034B133 /* Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1B1AB97B2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-Test" target */,
+				1B1AB97C2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-TestTests" target */,
+				1B1AB97D2E67B96800F2D716 /* Exceptions for "Tests" folder in "Viaplay-TestUITests" target */,
+			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		1B80E5532E65B6F10034B133 /* UITests */ = {
+		1B80E5372E65B6EE0034B133 /* Viaplay-Test */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				1BB3A9AA2E67502100E7147E /* Exceptions for "UITests" folder in "Viaplay-Test" target */,
-			);
-			path = UITests;
+			path = "Viaplay-Test";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -89,8 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1B80E5372E65B6EE0034B133 /* Viaplay-Test */,
-				1B80E5492E65B6F10034B133 /* Tests */,
-				1B80E5532E65B6F10034B133 /* UITests */,
+				1B1AB96C2E67B96700F2D716 /* Tests */,
 				1B80E5362E65B6EE0034B133 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				1B1AB96C2E67B96700F2D716 /* Tests */,
 				1B80E5372E65B6EE0034B133 /* Viaplay-Test */,
 			);
 			name = "Viaplay-Test";
@@ -143,9 +160,6 @@
 			dependencies = (
 				1B80E5482E65B6F10034B133 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				1B80E5492E65B6F10034B133 /* Tests */,
-			);
 			name = "Viaplay-TestTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +179,6 @@
 			);
 			dependencies = (
 				1B80E5522E65B6F10034B133 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				1B80E5532E65B6F10034B133 /* UITests */,
 			);
 			name = "Viaplay-TestUITests";
 			packageProductDependencies = (

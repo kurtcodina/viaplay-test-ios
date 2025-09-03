@@ -15,6 +15,6 @@ enum UITestLaunchArguments: String {
     case sectionSuccess   = "--utest_section_success"
     
     case listNavigationToSection   = "--uitest_list_navigation_to_section"
-    case listNavigationToRoot   = "--uitest_list_navigation_to_root"
+    case listNavigationToRoot      = "--uitest_list_navigation_to_root"
     
 }

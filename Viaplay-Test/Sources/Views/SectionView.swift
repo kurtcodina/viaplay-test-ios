@@ -35,6 +35,11 @@ struct SectionView: View {
             }
         }
         .navigationTitle(viewModel.section.displayTitle)
+        .overlay(alignment: .bottom) {
+            if viewModel.isStale {
+                StaleDataBanner()
+            }
+        }
     }
 }
 

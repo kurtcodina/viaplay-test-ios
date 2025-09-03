@@ -8,7 +8,6 @@
 import Foundation
 
 extension ViaplayPage {
-    
     static let rootMock: ViaplayPage = {
         let json = """
         {

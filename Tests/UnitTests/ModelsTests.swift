@@ -10,13 +10,13 @@ import XCTest
 @testable import Viaplay_Test
 
 final class ModelsTests: XCTestCase {
-    func testTemplateStripping() throws {
+    func test_uriTemplateFunction_removesURITemplate() throws {
         let raw = "https://foo/bar{?q}"
         let cleaned = raw.removingURITemplates()
         XCTAssertEqual(cleaned, "https://foo/bar")
     }
     
-    func testDecodeViaplaySectionsKey() throws {
+    func test_viaplayPageModel_decoder_decodesCorrectly() throws {
         let json = """
         {
             "type": "page",
@@ -37,7 +37,7 @@ final class ModelsTests: XCTestCase {
         XCTAssertEqual(root.links.viaplaySections.first?.title, "Series")
     }
     
-    func testOptionalFieldsDecodeAsNil() throws {
+    func test_viaplayPageModel_decoder_decodesOptionalFieldsAsNil() throws {
         let json = """
         {
             "type": "page",

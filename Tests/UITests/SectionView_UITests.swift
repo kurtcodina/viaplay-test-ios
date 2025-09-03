@@ -17,7 +17,7 @@ final class SectionView_UITests: XCTestCase {
         
     }
     
-    func test_SectionView_loader_shouldShowWhenLoading() {
+    func test_sectionView_progressView_shouldShowWhenLoading() {
         let app = XCUIApplication()
         app.launchArguments.append(UITestLaunchArguments.rootSuccess.rawValue)
         app.launchArguments.append(UITestLaunchArguments.sectionLoader.rawValue)
@@ -28,7 +28,7 @@ final class SectionView_UITests: XCTestCase {
         XCTAssertTrue(app.activityIndicators.firstMatch.exists)
     }
     
-    func test_SectionView_noContent_shouldShowEmptyState() {
+    func test_sectionView_contentUnavailable_shouldShowEmptyState() {
         let app = XCUIApplication()
         app.launchArguments.append(UITestLaunchArguments.rootSuccess.rawValue)
         app.launchArguments.append(UITestLaunchArguments.sectionNoContent.rawValue)
@@ -39,7 +39,7 @@ final class SectionView_UITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Content Unavailable"].exists)
     }
     
-    func test_SectionView_navigationToRootView_shouldNavigateCorrectly() {
+    func test_sectionView_navigationToRootView_shouldNavigateCorrectly() {
         let app = XCUIApplication()
         app.launchArguments.append(UITestLaunchArguments.rootSuccess.rawValue)
         app.launchArguments.append(UITestLaunchArguments.sectionSuccess.rawValue)

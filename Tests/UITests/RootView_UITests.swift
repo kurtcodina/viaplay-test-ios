@@ -17,7 +17,7 @@ final class RootView_UITests: XCTestCase {
         
     }
     
-    func test_RootView_loader_shouldShowWhenLoading() {
+    func test_rootView_progressView_shouldShowWhenLoading() {
         let app = XCUIApplication()
         app.launchArguments.append(UITestLaunchArguments.rootLoader.rawValue)
         app.launch()
@@ -25,7 +25,7 @@ final class RootView_UITests: XCTestCase {
         XCTAssertTrue(app.activityIndicators.firstMatch.exists)
     }
     
-    func test_RootView_contentUnavailable_shouldShowWhenNoContent() {
+    func test_rootView_contentUnavailableView_shouldShowWhenNoContent() {
         let app = XCUIApplication()
         app.launchArguments.append(UITestLaunchArguments.rootNoContent.rawValue)
         app.launch()

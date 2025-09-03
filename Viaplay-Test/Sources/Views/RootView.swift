@@ -37,6 +37,11 @@ struct RootView: View {
                 }
             }
             .navigationTitle("Home")
+            .overlay(alignment: .bottom) {
+                if viewModel.isStale {
+                    StaleDataBanner()
+                }
+            }
         }
     }
 }
