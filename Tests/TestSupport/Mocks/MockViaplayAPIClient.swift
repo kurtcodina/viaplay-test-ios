@@ -87,7 +87,7 @@ extension MockViaplayAPIClient {
     
     static func timeoutMock() -> MockViaplayAPIClient {
         let mock = MockViaplayAPIClient()
-        mock.configureNetworkDelay(10)
+        mock.configureNetworkDelay(30)
         mock.configureMockError(URLError(.timedOut))
         return mock
     }

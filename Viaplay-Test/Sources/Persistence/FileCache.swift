@@ -13,9 +13,15 @@ final class FileCache {
 
     init() {
         let fileManager = FileManager.default
-        directoryURL = try! fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("FileCache", isDirectory: true)
-        try? fileManager.createDirectory(at: directoryURL,
-                                withIntermediateDirectories: true)
+        
+        let appSupportURL = (try? fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)) ?? URL(fileURLWithPath: NSTemporaryDirectory())
+        directoryURL = appSupportURL.appendingPathComponent("FileCache", isDirectory: true)
+
+        do {
+            try fileManager.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        } catch {
+            print("Could not create FileCache directory: \(error)")
+        }
     }
 
     private func fileURL(for endpoint: URL) -> URL {
