@@ -21,7 +21,7 @@ final class ViaplayAPIClient: APIClient {
         
         if let httpResponse = response as? HTTPURLResponse {
             guard (200...299).contains(httpResponse.statusCode) else {
-                throw URLError(.badServerResponse) // or a custom error
+                throw URLError(.badServerResponse)
             }
         } else {
             throw URLError(.badServerResponse)
